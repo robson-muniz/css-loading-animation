@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	background-color: #111;
+	justify-content: center;
+	align-items: center;
+	/*    Why this is not working*/
+	min-height: 100vh;
+}
+
+.loader {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	/*    background-color: orangered;*/
+	/*    and now how can we put it in the center? | ? question 2s silence*/
+	/*    Flexbox*/
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*    sound comemorating or b-roll*/
+}
+
+.loader span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #fff;
+	pointer-events: none;
+	animation: animate 5s linear infinite;
+	/*Now we should create this animate animation right?*/
+}
+
+.loader span:nth-child(1) {
+	border-color: #f5ad02;
+	border-radius: 72% 28% 62% 38% / 19% 75% 25% 81%;
+}
+
+.loader span:nth-child(2) {
+	border-color: #294294;
+	border-radius: 49% 51% 33% 67% / 39% 53% 47% 61%;
+	animation-direction: reverse;
+	animation-duration: 3s;
+}
+
+.loader span:nth-child(3) {
+	border-color: #f45631;
+	animation-duration: 2.5s;
+	border-radius: 19% 81% 19% 81% / 70% 22% 78% 30%;
+}
+
+/*All right the project is done... I am joking...
+Show a serious face
+*/
+
+@keyframes animate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/*What is that? Ungly thing? Please dont put it on your portfolio at least not until the end of the video.*/
+
+.loader h2 {
+	color: #b1ddf1;
+	font-family: consolas, sans-serif;
+	font-weight: 500;
+}
